@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,6 +48,8 @@ public class MapActivity extends AppCompatActivity {
         mapController.setZoom(9.5);
         GeoPoint startPoint = new GeoPoint(-6.138377, 106.866463);
         mapController.setCenter(startPoint);
+
+        Toast.makeText(ctx, "this", Toast.LENGTH_SHORT).show();
 
         requestPermissionsIfNecessary(new String[]{
                 Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
