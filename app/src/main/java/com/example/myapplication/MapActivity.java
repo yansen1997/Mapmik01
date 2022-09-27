@@ -50,7 +50,7 @@ public class MapActivity extends AppCompatActivity {
         mapController.setCenter(startPoint);
 
         Toast.makeText(ctx, "this", Toast.LENGTH_SHORT).show();
-        Toast.makeText(ctx, "ini", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ctx, "hehe", Toast.LENGTH_SHORT).show();
         requestPermissionsIfNecessary(new String[]{
                 Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION
