@@ -3,542 +3,547 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".InsertVessel">
+    android:layout_height="match_parent" >
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    <EditText
-        android:id="@+id/user"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InsertVessel">
 
-    <EditText
-        android:id="@+id/id"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your ID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user" />
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id" />
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your ID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user" />
 
-    <EditText
-        android:id="@+id/Built_by"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Build by"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id" />
 
-    <EditText
-        android:id="@+id/inmarsat_number_phone_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Number phone 1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Built_by" />
+        <EditText
+            android:id="@+id/Built_by"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Build by"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <EditText
-        android:id="@+id/inmarsat_number_phone_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Number phone 2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inmarsat_number_phone_1" />
+        <EditText
+            android:id="@+id/inmarsat_number_phone_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Number phone 1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Built_by" />
 
-    <EditText
-        android:id="@+id/inmarsat_number_fax"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Fax"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inmarsat_number_phone_2" />
+        <EditText
+            android:id="@+id/inmarsat_number_phone_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Number phone 2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inmarsat_number_phone_1" />
 
-    <EditText
-        android:id="@+id/inmarsat_telex"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Telex"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inmarsat_number_fax" />
+        <EditText
+            android:id="@+id/inmarsat_number_fax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Fax"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inmarsat_number_phone_2" />
 
-    <EditText
-        android:id="@+id/max_teus_container_capacity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Max Teus Container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inmarsat_telex" />
+        <EditText
+            android:id="@+id/inmarsat_telex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Telex"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inmarsat_number_fax" />
 
-    <EditText
-        android:id="@+id/max_teus_reefer_capacity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Max Teus Reefer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/max_teus_container_capacity" />
+        <EditText
+            android:id="@+id/max_teus_container_capacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Max Teus Container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inmarsat_telex" />
 
-    <EditText
-        android:id="@+id/stack_wt_in_hold"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Stack wt in Hold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/max_teus_reefer_capacity" />
+        <EditText
+            android:id="@+id/max_teus_reefer_capacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Max Teus Reefer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/max_teus_container_capacity" />
 
-    <EditText
-        android:id="@+id/stack_wt_in_deck"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Stack wt in Deck"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stack_wt_in_hold" />
+        <EditText
+            android:id="@+id/stack_wt_in_hold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Stack wt in Hold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/max_teus_reefer_capacity" />
 
-    <EditText
-        android:id="@+id/holds"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Holds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stack_wt_in_deck" />
+        <EditText
+            android:id="@+id/stack_wt_in_deck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Stack wt in Deck"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stack_wt_in_hold" />
 
-    <EditText
-        android:id="@+id/hatches"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Hatches"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/holds" />
+        <EditText
+            android:id="@+id/holds"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Holds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stack_wt_in_deck" />
 
-    <EditText
-        android:id="@+id/hatches_size"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Hatches Size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hatches" />
+        <EditText
+            android:id="@+id/hatches"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Hatches"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/holds" />
 
-    <EditText
-        android:id="@+id/official_no"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Official No"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hatches_size" />
+        <EditText
+            android:id="@+id/hatches_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Hatches Size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hatches" />
 
-    <EditText
-        android:id="@+id/call_sign"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Call Sign"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/official_no" />
+        <EditText
+            android:id="@+id/official_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Official No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hatches_size" />
 
-    <EditText
-        android:id="@+id/imo_number"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Imo Number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/call_sign" />
+        <EditText
+            android:id="@+id/call_sign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Call Sign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/official_no" />
 
-    <EditText
-        android:id="@+id/ship_loa"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Loa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imo_number" />
+        <EditText
+            android:id="@+id/imo_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Imo Number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/call_sign" />
 
-    <EditText
-        android:id="@+id/ship_lbp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Lbp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_loa" />
+        <EditText
+            android:id="@+id/ship_loa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Loa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imo_number" />
 
-    <EditText
-        android:id="@+id/ship_breadth"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Breadth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_lbp" />
+        <EditText
+            android:id="@+id/ship_lbp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Lbp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_loa" />
 
-    <EditText
-        android:id="@+id/ship_max_height"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Max Height"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_breadth" />
+        <EditText
+            android:id="@+id/ship_breadth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Breadth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_lbp" />
 
-    <EditText
-        android:id="@+id/ship_fwa"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Fwa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_max_height" />
+        <EditText
+            android:id="@+id/ship_max_height"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Max Height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_breadth" />
 
-    <EditText
-        android:id="@+id/ship_depth"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Depth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_fwa" />
+        <EditText
+            android:id="@+id/ship_fwa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Fwa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_max_height" />
 
-    <EditText
-        android:id="@+id/ship_draft_summer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Draft Summer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_depth" />
+        <EditText
+            android:id="@+id/ship_depth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Depth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_fwa" />
 
-    <EditText
-        android:id="@+id/ship_dwt_summer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Dwt Summer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_draft_summer" />
+        <EditText
+            android:id="@+id/ship_draft_summer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Draft Summer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_depth" />
 
-    <EditText
-        android:id="@+id/ship_displ_summer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Ship Displ Summer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_dwt_summer" />
+        <EditText
+            android:id="@+id/ship_dwt_summer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Dwt Summer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_draft_summer" />
 
-    <EditText
-        android:id="@+id/gross_tonnage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Gross Tonnage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ship_displ_summer" />
+        <EditText
+            android:id="@+id/ship_displ_summer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Ship Displ Summer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_dwt_summer" />
 
-    <EditText
-        android:id="@+id/net_tonnage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Net Tonnage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gross_tonnage" />
+        <EditText
+            android:id="@+id/gross_tonnage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Gross Tonnage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ship_displ_summer" />
 
-    <EditText
-        android:id="@+id/light_ship"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Light Ship"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/net_tonnage" />
+        <EditText
+            android:id="@+id/net_tonnage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Net Tonnage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gross_tonnage" />
 
-    <EditText
-        android:id="@+id/service_speed"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Service_speed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/light_ship" />
+        <EditText
+            android:id="@+id/light_ship"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Light Ship"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/net_tonnage" />
 
-    <EditText
-        android:id="@+id/fo_tank_capacity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Fo Tank Capacity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_speed" />
+        <EditText
+            android:id="@+id/service_speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Service_speed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/light_ship" />
 
-    <EditText
-        android:id="@+id/do_tank_capacity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Do Tank Capacity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fo_tank_capacity" />
+        <EditText
+            android:id="@+id/fo_tank_capacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Fo Tank Capacity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/service_speed" />
 
-    <EditText
-        android:id="@+id/fw_tank_capacity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Fw Tank Capacity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/do_tank_capacity" />
+        <EditText
+            android:id="@+id/do_tank_capacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Do Tank Capacity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fo_tank_capacity" />
 
-    <EditText
-        android:id="@+id/blst_tank_capacity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Blst Tank Capacity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fw_tank_capacity" />
+        <EditText
+            android:id="@+id/fw_tank_capacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Fw Tank Capacity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/do_tank_capacity" />
 
-    <EditText
-        android:id="@+id/id_owner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Id Owner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blst_tank_capacity" />
+        <EditText
+            android:id="@+id/blst_tank_capacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Blst Tank Capacity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fw_tank_capacity" />
 
-    <EditText
-        android:id="@+id/id_management"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Id Management"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_owner" />
+        <EditText
+            android:id="@+id/id_owner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Id Owner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blst_tank_capacity" />
 
-    <EditText
-        android:id="@+id/id_operator"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Id Operator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_management" />
+        <EditText
+            android:id="@+id/id_management"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Id Management"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_owner" />
 
-    <EditText
-        android:id="@+id/vessel_type"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Vessel Type"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_operator" />
+        <EditText
+            android:id="@+id/id_operator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Id Operator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_management" />
 
-    <EditText
-        android:id="@+id/vessel_class"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Enter your Vessel Class"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vessel_type" />
+        <EditText
+            android:id="@+id/vessel_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Vessel Type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_operator" />
 
-    <Button
-        android:id="@+id/idBtnPost"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="20dp"
-        android:text="Send Data to API"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vessel_class" />
+        <EditText
+            android:id="@+id/vessel_class"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter your Vessel Class"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vessel_type" />
+
+        <Button
+            android:id="@+id/idBtnPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="20dp"
+            android:text="Send Data to API"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vessel_class" />
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
