@@ -21,6 +21,9 @@
         tools:targetApi="31">
         <activity
             android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InsertVessel"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

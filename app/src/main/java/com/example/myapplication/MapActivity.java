@@ -41,6 +41,7 @@ public class MapActivity extends AppCompatActivity {
         map = (MapView) findViewById(R.id.map);
         map.setTileSource(TileSourceFactory.MAPNIK);
 
+
         map.setBuiltInZoomControls(true);
         map.setMultiTouchControls(true);
 
@@ -109,8 +110,6 @@ public class MapActivity extends AppCompatActivity {
                     REQUEST_PERMISSIONS_REQUEST_CODE);
         }
     }
-
-
 
 }
 
