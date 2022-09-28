@@ -61,7 +61,6 @@ public class MapActivity extends AppCompatActivity {
         IMapController mapController = map.getController();
         mapController.setZoom(9.5);
         GeoPoint startPoint = new GeoPoint(-6.138377, 106.866463);
-        GeoPoint markerpoint = new GeoPoint(-6.137170, 106.865240);
         mapController.setCenter(startPoint);
 
         RequestQueue queue = Volley.newRequestQueue(MapActivity.this);
@@ -77,10 +76,7 @@ public class MapActivity extends AppCompatActivity {
                     for(int i=0; i< ja.length() ; i++){
                         JSONObject j = ja.getJSONObject(i);
                         Marker startMarker = new Marker(map);
-
-                        Double lon = j.getDouble("lon");
-                        Double lat = j.getDouble("lat");
-                        GeoPoint markerpoint = new GeoPoint(lat,lon);
+                        GeoPoint markerpoint = new GeoPoint(j.getDouble("lat"),j.getDouble("lon"));
                         try{
                             startMarker.setPosition(markerpoint);
                         }
@@ -111,9 +107,6 @@ public class MapActivity extends AppCompatActivity {
         }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-
-
-
                 Map<String, String>  headers= new HashMap<String, String>();
                 headers.put("Authorization ", "Basic dGVtYXNsaW5lOlhJYTFHak5jU0plbjgzUHRUUFQ2aGFUQ2c=");
                 return headers;
@@ -126,12 +119,6 @@ public class MapActivity extends AppCompatActivity {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION
         });
-//        Marker startMarker = new Marker(map);
-//        startMarker.setPosition(markerpoint);
-//        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-//        map.getOverlays().add(startMarker);
-
-
 
     }
 
