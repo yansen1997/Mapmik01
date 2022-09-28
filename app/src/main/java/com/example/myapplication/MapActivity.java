@@ -19,6 +19,7 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.Marker;
 
 import java.util.ArrayList;
 
@@ -47,6 +48,7 @@ public class MapActivity extends AppCompatActivity {
         IMapController mapController = map.getController();
         mapController.setZoom(9.5);
         GeoPoint startPoint = new GeoPoint(-6.138377, 106.866463);
+        GeoPoint markerpoint = new GeoPoint(-6.137170, 106.865240);
         mapController.setCenter(startPoint);
 
         Toast.makeText(ctx, "this", Toast.LENGTH_SHORT).show();
@@ -55,6 +57,10 @@ public class MapActivity extends AppCompatActivity {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION
         });
+        Marker startMarker = new Marker(map);
+        startMarker.setPosition(markerpoint);
+        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+        map.getOverlays().add(startMarker);
 
     }
 
