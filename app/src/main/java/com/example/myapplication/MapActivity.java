@@ -55,6 +55,7 @@ public class MapActivity extends AppCompatActivity {
         map = (MapView) findViewById(R.id.map);
         map.setTileSource(TileSourceFactory.MAPNIK);
 
+
         map.setBuiltInZoomControls(true);
         map.setMultiTouchControls(true);
 
@@ -162,7 +163,7 @@ public class MapActivity extends AppCompatActivity {
         for (String permission : permissions) {
             if (ContextCompat.checkSelfPermission(this, permission)
                     != PackageManager.PERMISSION_GRANTED) {
-                // Permission is not granted
+                // Permission is not granted hhjhj
                 permissionsToRequest.add(permission);
             }
         }
@@ -173,8 +174,6 @@ public class MapActivity extends AppCompatActivity {
                     REQUEST_PERMISSIONS_REQUEST_CODE);
         }
     }
-
-
 
 }
 
