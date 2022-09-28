@@ -99,7 +99,7 @@ public class MapActivity extends AppCompatActivity {
         for (String permission : permissions) {
             if (ContextCompat.checkSelfPermission(this, permission)
                     != PackageManager.PERMISSION_GRANTED) {
-                // Permission is not granted
+                // Permission is not granted hhjhj
                 permissionsToRequest.add(permission);
             }
         }
