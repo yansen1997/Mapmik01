@@ -140,11 +140,11 @@ public class InsertVessel extends AppCompatActivity {
 
                 // on below line we are passing our key
                 // and value pair to our parameters.
-                params.put("toString", toString);
-                params.put("toString2", toString2);
-                params.put("toString3", toString3);
-                params.put("toString4", toString4);
-                params.put("toString5", toString5);
+                params.put("user", toString);
+                params.put("name", toString2);
+                params.put("builtBy", toString3);
+                params.put("numberPhone1", toString4);
+                params.put("numberPhone2", toString5);
                 params.put("toString6", toString6);
                 params.put("toString7", toString7);
                 params.put("toString8", toString8);
