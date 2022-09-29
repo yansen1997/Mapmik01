@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -17,6 +18,9 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class InsertVessel extends AppCompatActivity {
 
@@ -108,6 +112,7 @@ public class InsertVessel extends AppCompatActivity {
                     String toString = respObj.getString("user");
                     String toString1 = respObj.getString("id");
                     String toString2 = respObj.getString("name");
+                    Toast.makeText(InsertVessel.this, "User" +toString, Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -118,12 +123,21 @@ public class InsertVessel extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(InsertVessel.this, "Failed to get response", Toast.LENGTH_SHORT).show();
+                Toast.makeText(InsertVessel.this, "Failed to get response : " +error, Toast.LENGTH_SHORT).show();
+                error.printStackTrace();
             }
-        }){
+        }) {
 
+            @Override
+            public Map<String, String> getParams() throws AuthFailureError{
+                Map<String, String> params = new HashMap<>();
+                params.put("Content-Type", "application/json");
+                params.put("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0MCIsImp0aSI6IjBjNmNjMmYwNDgyY2Q5ZDNiOTI4ZWQ1N2JiY2M4NTNmNGQ5MTMyZjYzNjdkOTM5ODlkMDgzMmE3NWYwY2YyMWMyODYyMmI2YzRhYmU2NDlkIiwiaWF0IjoxNjY0NDE5NzU2LjQ0NzM2NCwibmJmIjoxNjY0NDE5NzU2LjQ0NzM3NCwiZXhwIjoxNjY0NDIzMzU2LjQ0MDA3Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.CNEBPisbI0QT6e0H8yTH_l8mt9hm6WnIhh-ubdaCK5lP62SS5HtIL_zXHd-IjokUO1hNeaSYN7nHj7ExP0sW2bTp05C7VsDwP3mV7HXqJTlpcVe_8LwDKfn696pRqHEuyGUjf1s8TeGlPqBg7bjdAwqozxrl92k-NoiVf5xeEiTyz515YK-8-c8DcIS2I9Y6tznccsdhMMsLh3H8W0yWa5SesODfle6BPrMOfEtjHDN3YUjZJW7gO7OqhyKjiKJhDId5n9QcTb1BUrgnhLnBr85pq4BNLtyi_5l6npMmxEF1jyo9byWxK_9rhA3xqVpAwiO3g5fqNyU-6WwN_2gaFobKCfgaIK344iUAs47ojUSnOMT_QtcQxpUWws_VIPQcdS9YnK0cbXvil5ntGiWa006379NJ0wWqaeS0_OYD1f6kcdwKt_KXoKtHBrryso1Z4s1YyE0opZSO6huHQ-wXXpnfqtR4aCVr0U9X7sglfcqrdu-WwB9ZZjO8NwCIQ8o-0mZnMNQ0bc30abrprMrUZVfLQWwoaFnZsjtfWBt3atRWgmT-FGKfbfDd21Ty_Tb1nhaT6TW7WTvHVFT80co8_6MGKS8P7X5Upqv6tKkaItKGMi3roOaYZHdVbEH0JQ3_QRKY52QFi2WhZvSTnVN9977wkRl8JZGGSw5xX0SaLM0" );
+                return params;
+            }
 
-
-        }; queue.add(request);
+            ;
+        };
+        queue.add(request);
     }
 }
