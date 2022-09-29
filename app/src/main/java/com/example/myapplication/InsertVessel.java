@@ -25,9 +25,9 @@ import java.util.Map;
 public class InsertVessel extends AppCompatActivity {
 
     private EditText user, name, builtBy, numberPhone1, numberPhone2, numberFax, numberTelex,
-    maxTeusContainer, maxTeusReefer, wtInHold, wtInDeck, hold, hatche, hatchesSize, officialNo, callSign, imoNumber,
-    shipLoa, shipLbp, shipBreadth, shipMaxHeight, shipFwa, shipDepth, shipDraft, shipDwt, shipDispl, gross, net, lightShip, serviceSpeed,
-    foTank, doTank, fwTank, blstTank, idOwner, idManagement, idOperator, vesselType, vesselClass;
+            maxTeusContainer, maxTeusReefer, wtInHold, wtInDeck, hold, hatche, hatchesSize, officialNo, callSign, imoNumber,
+            shipLoa, shipLbp, shipBreadth, shipMaxHeight, shipFwa, shipDepth, shipDraft, shipDwt, shipDispl, gross, net, lightShip, serviceSpeed,
+            foTank, doTank, fwTank, blstTank, idOwner, idManagement, idOperator, vesselType, vesselClass;
     private Button PostVessel;
 
     @Override
@@ -36,7 +36,6 @@ public class InsertVessel extends AppCompatActivity {
         setContentView(R.layout.activity_insert_vessel);
 
         user = findViewById(R.id.user);
-
         name = findViewById(R.id.name);
         builtBy = findViewById(R.id.Built_by);
         numberPhone1 = findViewById(R.id.inmarsat_number_phone_1);
@@ -76,14 +75,12 @@ public class InsertVessel extends AppCompatActivity {
         vesselType = findViewById(R.id.vessel_type);
         vesselClass = findViewById(R.id.vessel_class);
         PostVessel = findViewById(R.id.idBtnPost);
-        user.getText().toString();
 
         PostVessel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 postDataUsingVolley(user.getText().toString(), name.getText().toString(), builtBy.getText().toString(),
-                numberPhone1.getText().toString(), numberPhone2.getText().toString(), numberFax.getText().toString(), numberTelex.getText().toString(),
+                        numberPhone1.getText().toString(), numberPhone2.getText().toString(), numberFax.getText().toString(), numberTelex.getText().toString(),
                         maxTeusContainer.getText().toString(), maxTeusReefer.getText().toString(), wtInHold.getText().toString(), wtInDeck.getText().toString(),
                         hold.getText().toString(), hatche.getText().toString(), hatchesSize.getText().toString(), officialNo.getText().toString(), callSign.getText().toString(),
                         imoNumber.getText().toString(), shipLoa.getText().toString(), shipLbp.getText().toString(), shipBreadth.getText().toString(), shipBreadth.getText().toString(),
@@ -111,10 +108,7 @@ public class InsertVessel extends AppCompatActivity {
                 try {
                     JSONObject respObj = new JSONObject(response);
 
-                    String toString = respObj.getString("user");
-                    String toString1 = respObj.getString("id");
-                    String toString2 = respObj.getString("name");
-                    Toast.makeText(InsertVessel.this, "User" +toString, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InsertVessel.this, "User" + toString, Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -125,24 +119,44 @@ public class InsertVessel extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(InsertVessel.this, "Failed to get response : " +error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(InsertVessel.this, "Failed to get response : " + error, Toast.LENGTH_SHORT).show();
                 error.printStackTrace();
             }
+
+
         }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = new HashMap<String, String>();
-                headers.put("Authorization ", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0MCIsImp0aSI6ImQ2NWMyNzNjZWNiMDNkMWE3ZTVmMTIyZGI2NWZkNzRiNTcxZmYxNjljYzhhNWIzMTA4M2U5NjMxZGIyMTg0ZTRiOWIxYWY0ZTU1NTY2NGZjIiwiaWF0IjoxNjY0NDIyNTg3LjEyNTUwMywibmJmIjoxNjY0NDIyNTg3LjEyNTUxMywiZXhwIjoxNjY0NDI2MTg3LjA5MzMxMywic3ViIjoiIiwic2NvcGVzIjpbXX0.nvBDMAh8HQQ05nF9rd9zBy_SmUFtTY43fkUX-jGnJcfdvTWR6DT5p2U4EkdBKZeqbDsYDpQdPKPnSI5VT6Fpx5NrZaqa-llG_PDa0ZD5Ae4KpcdeCtSlt4UJKQjYiLpyGFlJb7GzSG65_cf_XOGmLHSQwizjQ2k0RcEM1iK4yTaHKPLmXIrqrts3Eq8RxvuGYM47qlHfzBQo2xxzI4MGPgbgamQ2N81aO25RzZ0sY41bvx3k1ir3whLLme9QjBIUrtoy0hIINDlqABGW2B3oXLCQ0xixZ71-yzDnIdWWYGKzoCg0Fq1LoZ5jy7-UbMroTL2lyYGjBHbgYsmcP2qCOpjswAWNfPXlbH1pY_qWUQ66SsU8b1nkgZEZS2XS7b3NhtVmeR4bXncNUiwMAFJ8qqWIfRGUC4r22BY6049HMjNDgII1zkbT9G1HmhxVKEYqE9QskLG04QAicahXgZK3Sw8WIO7BLn5uSBRFeOClAskTG1P6eG_aWb3HdjX0RgBO_LZfvfGO2esFX8pJKol4qrRc-XoAcD9H2l68NC3OYH4Dt9B3fXd1X2tEH0OPmsIxDz8JHBcOh5nv578s0VmJXT3M_qFt9nUlzJUUjCvA0OlmtZZ-hu5jULtDvgD8Iq54WFg5LwHrScJ4JBrAA4lnVWm_rVEdggAPDFRWtxvwRnw");
+                headers.put("Authorization ", "Basic dGVtYXNsaW5lOlhJYTFHak5jU0plbjgzUHRUUFQ2aGFUQ2c=");
                 return headers;
             }
 
             @Override
             protected Map<String, String> getParams() {
+                // below line we are creating a map for
+                // storing our values in key and value pair.
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("toString", toString);
-                params.put("toString1", toString1);
-                params.put("toString2", toString2);
 
+                // on below line we are passing our key
+                // and value pair to our parameters.
+                params.put("toString", toString);
+                params.put("toString2", toString2);
+                params.put("toString3", toString3);
+                params.put("toString4", toString4);
+                params.put("toString5", toString5);
+                params.put("toString6", toString6);
+                params.put("toString7", toString7);
+                params.put("toString8", toString8);
+                params.put("toString9", toString9);
+                params.put("toString10", toString10);
+                params.put("toString11", toString11);
+                params.put("toString12", toString12);
+                params.put("toString13", toString13);
+
+
+                // at last we are
+                // returning our params.
                 return params;
             }
 
@@ -150,4 +164,5 @@ public class InsertVessel extends AppCompatActivity {
         };
         queue.add(request);
     }
+
 }
