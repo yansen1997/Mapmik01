@@ -140,19 +140,46 @@ public class InsertVessel extends AppCompatActivity {
 
                 // on below line we are passing our key
                 // and value pair to our parameters.
-                params.put("toString", toString);
-                params.put("toString2", toString2);
-                params.put("toString3", toString3);
-                params.put("toString4", toString4);
-                params.put("toString5", toString5);
-                params.put("toString6", toString6);
-                params.put("toString7", toString7);
-                params.put("toString8", toString8);
-                params.put("toString9", toString9);
-                params.put("toString10", toString10);
-                params.put("toString11", toString11);
-                params.put("toString12", toString12);
-                params.put("toString13", toString13);
+                params.put("user", toString);
+                params.put("name", toString2);
+                params.put("builtBy", toString3);
+                params.put("numberPhone1", toString4);
+                params.put("numberPhone2", toString5);
+                params.put("numberFax", toString6);
+                params.put("numberTelex", toString7);
+                params.put("maxTeusContainer", toString8);
+                params.put("maxTeusReefer", toString9);
+                params.put("wtInHold", toString10);
+                params.put("wtInDeck", toString11);
+                params.put("hold", toString12);
+                params.put("hatche", toString13);
+                params.put("hatchesSize", toString14);
+                params.put("officialNo", toString15);
+                params.put("callSign", toString16);
+                params.put("imoNumber", toString17);
+                params.put("shipLoa", toString18);
+                params.put("shipLbp", toString19);
+                params.put("shipBreadth", toString20);
+                params.put("shipMaxHeight", toString21);
+                params.put("shipFwa", toString22);
+                params.put("shipDepth", toString23);
+                params.put("shipDraft", toString24);
+                params.put("shipDwt", toString25);
+                params.put("shipDispl", toString26);
+                params.put("gross", toString27);
+                params.put("net", toString28);
+                params.put("lightShip", toString29);
+                params.put("serviceSpeed", toString30);
+                params.put("foTank", toString31);
+                params.put("doTank", toString32);
+                params.put("fwTank", toString33);
+                params.put("blstTank", toString34);
+                params.put("idOwner", toString35);
+                params.put("idManagement", toString36);
+                params.put("idOperator", toString37);
+                params.put("vesselType", toString38);
+                params.put("vesselClass", toString39);
+
 
 
                 // at last we are
