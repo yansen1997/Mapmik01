@@ -15,6 +15,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class InsertVessel extends AppCompatActivity {
 
     private EditText user, id, name, builtBy, numberPhone1, numberPhone2, numberFax, numberTelex,
@@ -97,14 +100,25 @@ public class InsertVessel extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(InsertVessel.this, "asd"+response, Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(InsertVessel.this, "Data added to API", Toast.LENGTH_SHORT).show();
+                try {
+                    JSONObject respObj = new JSONObject(response);
+
+                    String toString = respObj.getString("user");
+                    String toString1 = respObj.getString("id");
+                    String toString2 = respObj.getString("name");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
             }
 
 
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(InsertVessel.this, "Failed to get response", Toast.LENGTH_SHORT).show();
             }
         }){
 
