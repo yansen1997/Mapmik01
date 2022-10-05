@@ -77,16 +77,17 @@ public class InsertVessel extends AppCompatActivity {
         PostVessel = findViewById(R.id.idBtnPost);
 
         PostVessel.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 postDataUsingVolley(user.getText().toString(), name.getText().toString(), builtBy.getText().toString(),
                         numberPhone1.getText().toString(), numberPhone2.getText().toString(), numberFax.getText().toString(), numberTelex.getText().toString(),
                         maxTeusContainer.getText().toString(), maxTeusReefer.getText().toString(), wtInHold.getText().toString(), wtInDeck.getText().toString(),
                         hold.getText().toString(), hatche.getText().toString(), hatchesSize.getText().toString(), officialNo.getText().toString(), callSign.getText().toString(),
-                        imoNumber.getText().toString(), shipLoa.getText().toString(), shipLbp.getText().toString(), shipBreadth.getText().toString(), shipBreadth.getText().toString(),
+                        imoNumber.getText().toString(), shipLoa.getText().toString(), shipLbp.getText().toString(), shipBreadth.getText().toString(),
                         shipMaxHeight.getText().toString(), shipFwa.getText().toString(), shipDepth.getText().toString(), shipDraft.getText().toString(), shipDwt.getText().toString(),
                         shipDispl.getText().toString(), gross.getText().toString(), net.getText().toString(), lightShip.getText().toString(), serviceSpeed.getText().toString(), foTank.getText().toString(),
-                        doTank.getText().toString(), fwTank.getText().toString(), blstTank.getText().toString(), idOwner.getText().toString(), idManagement.getText().toString(), idOperator,
+                        doTank.getText().toString(), fwTank.getText().toString(), blstTank.getText().toString(), idOwner.getText().toString(), idManagement.getText().toString(), idOperator.getText().toString(),
                         vesselType.getText().toString(), vesselClass.getText().toString());
             }
         });
@@ -94,7 +95,8 @@ public class InsertVessel extends AppCompatActivity {
 
     }
 
-    private void postDataUsingVolley(String toString, String toString2, String toString3, String toString4, String toString5, String toString6, String toString7, String toString8, String toString9, String toString10, String toString11, String toString12, String toString13, String toString14, String toString15, String toString16, String toString17, String toString18, String toString19, String toString20, String toString21, String toString22, String toString23, String toString24, String toString25, String toString26, String toString27, String toString28, String toString29, String toString30, String toString31, String toString32, String toString33, String toString34, String toString35, String toString36, String toString37, EditText idOperator, String toString38, String toString39) {
+    private void postDataUsingVolley(String toString, String toString2, String toString3, String toString4, String toString5, String toString6, String toString7, String toString8,
+                                     String toString9, String toString10, String toString11, String toString12, String toString13, String toString14, String toString15, String toString16, String toString17, String toString18, String toString19, String toString20, String toString21, String toString22, String toString23, String toString24, String toString25, String toString26, String toString27, String toString28, String toString29, String toString30, String toString31, String toString32, String toString33, String toString34, String toString35, String toString36, String toString37, String toString38, String toString39) {
 
         String url = "http://192.168.1.119:7001/api/insertNewVessel";
 
